@@ -36,7 +36,7 @@
     "clean:dist": "rimraf dist",
     "clean:coverage": "rimraf coverage",
     "dev": "vite --mode dev",
-    "build": "pnpm clean:dist && vite build --mode prod && vue-tsc --emitDeclarationOnly",
+    "build": "vite build --mode prod && vue-tsc --emitDeclarationOnly",
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -56,9 +56,6 @@
       "optional": true
     }
   },
-  "dependencies": {
-    "vue-demi": "^0.12.1"
-  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.18.9",
     "@commitlint/cli": "^16.2.3",
@@ -76,8 +73,5 @@
     "vitest": "^0.7.6",
     "vue": "^3.2.31",
     "vue-tsc": "^0.29.8"
-  },
-  "volta": {
-    "node": "14.19.1"
   }
 }
