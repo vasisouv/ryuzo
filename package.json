@@ -1,16 +1,14 @@
 {
   "name": "@vasisouv/ryuzo",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A set of reusable components for Vue 3 based on Tailwind CSS",
   "keywords": [
-    "starter",
-    "boilerplate",
-    "vue",
+    "components",
     "vue3",
-    "component",
-    "ui",
-    "frontend"
+    "component library",
+    "ui kit",
+    "tailwind"
   ],
   "license": "MIT",
   "author": "Vasilis Souvatzis",
