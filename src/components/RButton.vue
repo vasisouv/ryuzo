@@ -1,5 +1,7 @@
 <template>
-  <div>hello world</div>
+  <div class="flex">
+    hello world
+  </div>
 </template>
 <script setup lang="ts">
 import { Variant } from '~/types/variant'
