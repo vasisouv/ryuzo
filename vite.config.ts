@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => {
         entry: resolve(__dirname, 'src/index.ts'),
         name: 'ryuzo',
         fileName: 'index',
-        formats: ['es', 'cjs', 'umd'],
+        formats: ['es', 'cjs', 'umd']
       },
       rollupOptions: {
         /**
@@ -22,9 +22,7 @@ export default defineConfig(({ mode }) => {
          * make sure to externalize deps that shouldn't be bundled
          * into your library
          */
-        external: [
-          'vue',
-        ],
+        external: ['vue'],
         output: {
           /**
            * DESC:
@@ -32,10 +30,10 @@ export default defineConfig(({ mode }) => {
            * for externalized deps
            */
           globals: {
-            vue: 'Vue',
-          },
-        },
-      },
+            vue: 'Vue'
+          }
+        }
+      }
     }
   }
 
@@ -46,7 +44,7 @@ export default defineConfig(({ mode }) => {
      * dependency pre-bundling
      */
     optimizeDeps = {
-      exclude: [],
+      exclude: []
     }
   }
 
@@ -60,22 +58,16 @@ export default defineConfig(({ mode }) => {
       include: ['test/**/*.test.ts'],
       environment: 'happy-dom',
       deps: {
-        inline: [
-          '@vue',
-        ],
+        inline: ['@vue']
       },
       coverage: {
-        reporter: [
-          'text',
-          'text-summary',
-          'lcov',
-        ],
-      },
+        reporter: ['text', 'text-summary', 'lcov']
+      }
     }
   }
 
   return {
-    plugins: [vue({ reactivityTransform: true })],
+    plugins: [vue()],
     optimizeDeps,
     build,
     test,
@@ -88,9 +80,9 @@ export default defineConfig(({ mode }) => {
       alias: [
         {
           find: '~',
-          replacement: resolve(__dirname, './src'),
-        },
-      ],
-    },
+          replacement: resolve(__dirname, './src')
+        }
+      ]
+    }
   }
 })
