@@ -32,7 +32,7 @@ export default defineConfig(({ mode }) => {
            * for externalized deps
            */
           globals: {
-            'vue': 'Vue'
+            vue: 'Vue',
           },
         },
       },
@@ -61,7 +61,7 @@ export default defineConfig(({ mode }) => {
       environment: 'happy-dom',
       deps: {
         inline: [
-          '@vue'
+          '@vue',
         ],
       },
       coverage: {
@@ -87,7 +87,7 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: [
         {
-          find: '@',
+          find: '~',
           replacement: resolve(__dirname, './src'),
         },
       ],

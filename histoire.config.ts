@@ -3,6 +3,11 @@ import { HstVue } from '@histoire/plugin-vue'
 
 export default defineConfig({
   plugins: [
-    HstVue()
-  ]
+    HstVue(),
+  ],
+  vite: {
+    server: {
+      port: 3334,
+    },
+  },
 })
