@@ -75,7 +75,7 @@ export default defineConfig(({ mode }) => {
   }
 
   return {
-    plugins: [vue()],
+    plugins: [vue({ reactivityTransform: true })],
     optimizeDeps,
     build,
     test,
