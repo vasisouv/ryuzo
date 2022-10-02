@@ -1,6 +1,7 @@
 <template>
   <Story>
     <HelloWorld />
+    <HelloWorld />
   </Story>
 </template>
 <script setup>

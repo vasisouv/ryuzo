@@ -1,4 +1,3 @@
-
-import HelloWorld from './HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue'
 export default HelloWorld
-export * from './HelloWorld.vue'
+export * from './components/HelloWorld.vue'

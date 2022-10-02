@@ -1,7 +1,7 @@
 {
-  "name": "ryuzo",
+  "name": "@vasisouv/ryuzo",
   "version": "0.0.1",
-  "description": "A set of reusable components for Vue 3",
+  "description": "A set of reusable components for Vue 3 based on Tailwind CSS",
   "keywords": [
     "starter",
     "boilerplate",
@@ -34,11 +34,8 @@
   "bugs": "https://github.com/vasisouv/ryuzo/issues",
   "scripts": {
     "story:dev": "histoire dev",
-    "story:build": "histoire build",
-    "story:preview": "histoire preview --port 4567",
     "dev": "vite --mode dev",
     "build": "vite build --mode prod && vue-tsc --emitDeclarationOnly",
-    "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "pnpm clean:coverage && vitest --coverage --mode test"
