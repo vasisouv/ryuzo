@@ -1,7 +1,7 @@
 <template>
   <component
     :is="tag"
-    class="app-button"
+    class="inline-flex items-center border border-transparent font-medium justify-center focus:outline-none focus:ring-2 focus:ring-offset-2"
     :class="buttonClasses"
     v-bind="attributes"
   >
@@ -61,17 +61,6 @@ const spinnerIsDark = computed(() => {
 })
 
 const buttonClasses = computed(() => {
-  const commonClasses = [
-    'inline-flex',
-    'items-center',
-    'border',
-    'border-transparent',
-    'font-medium',
-    'justify-center',
-    'focus:outline-none',
-    'focus:ring-2',
-    'focus:ring-offset-2'
-  ]
   function shadowClasses() {
     if (icon.value) return []
 
@@ -196,7 +185,6 @@ const buttonClasses = computed(() => {
   }
 
   return [
-    ...commonClasses,
     ...sizeClasses(),
     ...colorClasses(),
     ...disabledClasses(),

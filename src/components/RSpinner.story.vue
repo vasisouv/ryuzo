@@ -1,8 +1,9 @@
 <template>
-  <Story>
-    <RButton />
+  <Story class="p-3" title="RSpinner">
+    <RSpinner></RSpinner>
+    <RSpinner dark></RSpinner>
   </Story>
 </template>
 <script setup>
-import RButton from '~/components/RButton.vue'
+import RSpinner from '~/components/RSpinner.vue'
 </script>
