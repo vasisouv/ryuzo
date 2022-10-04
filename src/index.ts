@@ -1,3 +1,4 @@
 import RButton from '~/components/RButton.vue'
-export default RButton
-export * from '~/components/RButton.vue'
+import RSpinner from '~/components/RSpinner.vue'
+
+export { RButton, RSpinner }
