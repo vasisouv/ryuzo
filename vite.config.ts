@@ -14,63 +14,37 @@ export default defineConfig(({ mode }) => {
         entry: resolve(__dirname, 'src/index.ts'),
         name: 'ryuzo',
         fileName: 'index',
-        formats: ['es', 'cjs', 'umd'],
+        formats: ['es', 'cjs', 'umd']
       },
       rollupOptions: {
-        /**
-         * DESC:
-         * make sure to externalize deps that shouldn't be bundled
-         * into your library
-         */
-        external: [
-          'vue',
-        ],
+        external: ['vue'],
         output: {
-          /**
-           * DESC:
-           * Provide global variables to use in the UMD build
-           * for externalized deps
-           */
           globals: {
-            'vue': 'Vue'
-          },
-        },
-      },
+            vue: 'Vue'
+          }
+        }
+      }
     }
   }
 
   let optimizeDeps = {}
   if (isDev) {
-    /**
-     * DESC:
-     * dependency pre-bundling
-     */
     optimizeDeps = {
-      exclude: [],
+      exclude: []
     }
   }
 
   let test = {}
   if (isTest) {
-    /**
-     * DESC:
-     * vitest config
-     */
     test = {
       include: ['test/**/*.test.ts'],
       environment: 'happy-dom',
       deps: {
-        inline: [
-          '@vue'
-        ],
+        inline: ['@vue']
       },
       coverage: {
-        reporter: [
-          'text',
-          'text-summary',
-          'lcov',
-        ],
-      },
+        reporter: ['text', 'text-summary', 'lcov']
+      }
     }
   }
 
@@ -79,18 +53,13 @@ export default defineConfig(({ mode }) => {
     optimizeDeps,
     build,
     test,
-
-    /**
-     * DESC:
-     * defining aliases
-     */
     resolve: {
       alias: [
         {
-          find: '@',
-          replacement: resolve(__dirname, './src'),
-        },
-      ],
-    },
+          find: '~',
+          replacement: resolve(__dirname, './src')
+        }
+      ]
+    }
   }
 })

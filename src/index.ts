@@ -1,3 +1,3 @@
-import HelloWorld from './components/HelloWorld.vue'
-export default HelloWorld
-export * from './components/HelloWorld.vue'
+import RButton from '~/components/RButton.vue'
+export default RButton
+export * from '~/components/RButton.vue'
