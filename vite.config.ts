@@ -17,18 +17,8 @@ export default defineConfig(({ mode }) => {
         formats: ['es', 'cjs', 'umd']
       },
       rollupOptions: {
-        /**
-         * DESC:
-         * make sure to externalize deps that shouldn't be bundled
-         * into your library
-         */
         external: ['vue'],
         output: {
-          /**
-           * DESC:
-           * Provide global variables to use in the UMD build
-           * for externalized deps
-           */
           globals: {
             vue: 'Vue'
           }
@@ -39,10 +29,6 @@ export default defineConfig(({ mode }) => {
 
   let optimizeDeps = {}
   if (isDev) {
-    /**
-     * DESC:
-     * dependency pre-bundling
-     */
     optimizeDeps = {
       exclude: []
     }
@@ -50,10 +36,6 @@ export default defineConfig(({ mode }) => {
 
   let test = {}
   if (isTest) {
-    /**
-     * DESC:
-     * vitest config
-     */
     test = {
       include: ['test/**/*.test.ts'],
       environment: 'happy-dom',
@@ -71,11 +53,6 @@ export default defineConfig(({ mode }) => {
     optimizeDeps,
     build,
     test,
-
-    /**
-     * DESC:
-     * defining aliases
-     */
     resolve: {
       alias: [
         {

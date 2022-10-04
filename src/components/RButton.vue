@@ -19,31 +19,32 @@ import { computed, toRefs } from 'vue'
 import { Variant } from '~/types/variant'
 import { Size } from '~/types/size'
 import RSpinner from '~/components/RSpinner.vue'
-import { RouteLocationRaw } from 'vue-router'
+import { RouteLocationRaw, RouterLink } from 'vue-router'
 
-interface Props {
-  type?: string
-  size?: Size
-  loading?: boolean
-  disabled?: boolean
-  variant?: Variant
-  circle?: boolean
-  icon?: boolean
-  href?: string
-  to?: RouteLocationRaw
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  type: 'button',
-  size: Size.BASE,
-  variant: Variant.PRIMARY,
-  loading: false,
-  disabled: false,
-  circle: null,
-  icon: null,
-  href: null,
-  to: null
-})
+const props = withDefaults(
+  defineProps<{
+    type?: string
+    size?: Size
+    loading?: boolean
+    disabled?: boolean
+    variant?: Variant
+    circle?: boolean
+    icon?: boolean
+    href?: string
+    to?: RouteLocationRaw
+  }>(),
+  {
+    type: 'button',
+    size: Size.BASE,
+    variant: Variant.PRIMARY,
+    loading: false,
+    disabled: false,
+    circle: false,
+    icon: false,
+    href: '',
+    to: ''
+  }
+)
 
 const { type, size, variant, loading, disabled, circle, icon, href, to } =
   toRefs(props)
@@ -205,7 +206,7 @@ const buttonClasses = computed(() => {
 })
 
 const tag = computed(() => {
-  if (to.value) return NuxtLink
+  if (to.value) return RouterLink
   else if (href.value) return 'a'
 
   return 'button'

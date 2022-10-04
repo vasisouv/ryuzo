@@ -34,7 +34,7 @@
   "scripts": {
     "dev": "histoire dev",
     "dev:vite": "vite --mode dev",
-    "build": "vite build --mode prod && vue-tsc --emitDeclarationOnly",
+    "build": "vue-tsc --declaration --emitDeclarationOnly && vite build --mode=prod",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "pnpm clean:coverage && vitest --coverage --mode test"
@@ -59,6 +59,7 @@
     "@vitejs/plugin-vue": "^2.2.0",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^11.0.2",
+    "@vue/tsconfig": "^0.1.3",
     "autoprefixer": "^10.4.12",
     "c8": "^7.11.0",
     "commitizen": "^4.2.4",
@@ -75,6 +76,6 @@
     "vitest": "^0.7.6",
     "vue": "^3.2.31",
     "vue-router": "^4.1.5",
-    "vue-tsc": "^0.29.8"
+    "vue-tsc": "^0.40.13"
   }
 }
