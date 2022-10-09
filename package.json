@@ -1,7 +1,7 @@
 {
   "name": "@vasisouv/ryuzo",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.0.5",
   "description": "A set of reusable components for Vue 3 based on Tailwind CSS",
   "keywords": [
     "components",
