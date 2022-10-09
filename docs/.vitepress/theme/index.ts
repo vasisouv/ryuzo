@@ -1,3 +1,3 @@
-import '../../../src/main.css';
+import '~/main.css';
 
 export { default } from 'vitepress/theme';

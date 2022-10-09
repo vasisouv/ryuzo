@@ -1,7 +1,9 @@
 # RButton
 
+This is the documentation page for RButton
+
 <script setup>
-import RButton from '../../src/components/RButton.vue'
+import RButtonDocs from './r-button-docs.vue'
 </script>
 
-<RButton>Hello world </RButton>
+<RButtonDocs></RButtonDocs>

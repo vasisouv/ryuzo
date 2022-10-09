@@ -28,26 +28,34 @@ export default {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2022-present Vasilis Souvatzis'
     },
-
-    algolia: {
-      appId: 'TODO',
-      apiKey: 'TODO',
-      indexName: 'TODO'
-    },
-
-    carbonAds: {
-      code: 'TODO',
-      placement: 'TODO'
-    }
+    // algolia: {
+    //   appId: 'TODO',
+    //   apiKey: 'TODO',
+    //   indexName: 'TODO'
+    // },
+    // carbonAds: {
+    //   code: 'TODO',
+    //   placement: 'TODO'
+    // }
   }
 }
 
 function nav() {
   return [
-    { text: 'Guide', link: '/guide/what-is-vitepress', activeMatch: '/guide/' },
     { text: 'Components', link: '/components/introduction', activeMatch: '/components/' },
+    { text: 'Guide', link: '/guide/what-is-vitepress', activeMatch: '/guide/' },
     {
-      text: version
+      text: version,
+      items: [
+        {
+          text: 'npm',
+          link: 'https://www.npmjs.com/package/@vasisouv/ryuzo'
+        },
+        {
+          text: 'Github',
+          link: 'https://github.com/vasisouv/ryuzo/'
+        }
+      ]
     }
   ]
 }
