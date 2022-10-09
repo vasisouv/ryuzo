@@ -1,12 +1,12 @@
 ---
 layout: home
 
-title: VitePress
-titleTemplate: Vite & Vue Powered Static Site Generator
+title: Ryuzo
+titleTemplate: A Tailwind & Vue3 component library
 
 hero:
-  name: VitePress
-  text: Vite & Vue Powered Static Site Generator
+  name: Ryuzo
+  text: A Tailwind & Vue3 component library
   tagline: Simple, powerful, and performant. Meet the modern SSG framework you've always wanted.
   actions:
     - theme: brand

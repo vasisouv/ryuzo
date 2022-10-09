@@ -1,3 +1,3 @@
-# Ryuzo (WIP)
+# 🏯 Ryuzo (WIP)
 
-A set of reusable components built using Vue 3
+A Tailwind & Vue3 component library
