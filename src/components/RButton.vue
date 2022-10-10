@@ -1,7 +1,7 @@
 <template>
   <component
     :is="tag"
-    class="inline-flex items-center border border-transparent font-medium justify-center focus:outline-none focus:ring-2 focus:ring-offset-2"
+    class="inline-flex items-center border font-medium justify-center focus:outline-none focus:ring-2 focus:ring-offset-2"
     :class="buttonClasses"
     v-bind="attributes"
   >
@@ -98,7 +98,7 @@ const buttonClasses = computed(() => {
           return ['text-gray-600', 'hover:text-gray-700', 'focus:ring-gray-500']
 
         return [
-          'border-gray-300',
+          'border-grey-300',
           'bg-white',
           'hover:bg-gray-50',
           'focus:ring-primary-500'
